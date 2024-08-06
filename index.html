@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Lato:wght@400;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script type="module" src="./script.js"></script>
+    <title>Страница авторизации</title>
+  </head>
+
+  <body>
+    <header class="header"></header>
+    <main>
+      <div class="main-container">
+        <div class="left-screen">
+          <div class="authorization-block block">
+            <h2 class="authorization-header korataki-normal">
+              Пожалуйста, авторизуйтесь
+            </h2>
+            <h4 class="korataki-small">
+              Войдите в свою учетную запись, чтобы получить полный доступ ко
+              всем возможностям нашего ресурса
+            </h4>
+            <form action="#" method="post" class="authorization-form">
+              <label class="lato-medium"
+                >Введите вашу электронную почту:
+                <input
+                  type="email"
+                  class="input input-login"
+                  placeholder="Введите свой логин"
+                  name="auth_email"
+              /></label>
+              <label class="lato-medium"
+                >Введите ваш пароль:
+                <input
+                  type="password"
+                  required
+                  class="input input-password"
+                  placeholder="Введите свой пароль"
+                  name="auth_password"
+              /></label>
+
+              <p>
+                Забыли свой пароль?
+                <a href="#" id="restore-link">Нажмите для восстановления</a>
+              </p>
+              <label class="lato-medium checkbox"
+                >Запомнить меня на этом компьютере<input
+                  class="input-checkbox"
+                  type="checkbox"
+                  name="auth_save"
+              /></label>
+
+              <button type="submit" class="btn-submit btn-primary">
+                Войти
+              </button>
+              <p>
+                Впервые у нас?
+                <a href="#" id="registration-link">Нажмите для регистрации</a>
+              </p>
+            </form>
+          </div>
+
+          <div class="registration-block block hidden">
+            <h2 class="registration-header korataki-registration">
+              Пожалуйста, введите свои регистрационные данные
+            </h2>
+            <h4 class="korataki-small">
+              Зарегистрируйтесь на портале для получения скидки и подарка
+            </h4>
+            <form action="#" method="post" class="registration-form">
+              <label class="lato-medium"
+                >Как вас зовут?
+                <input
+                  type="text"
+                  class="input input-name"
+                  placeholder="Введите ваше имя"
+                  name="registration_name"
+              /></label>
+              <label class="lato-medium"
+                >Введите вашу электронную почту:
+                <input
+                  type="email"
+                  class="input input-login"
+                  placeholder="Введите свою почту"
+                  name="registration_email"
+              /></label>
+              <label class="lato-medium"
+                >Введите ваш пароль:
+                <input
+                  type="password"
+                  required
+                  class="input input-password"
+                  placeholder="Введите свой пароль"
+                  name="registration_password"
+              /></label>
+              <label class="lato-medium"
+                >Повторите свой пароль:
+                <input
+                  type="password"
+                  required
+                  class="input input-password-check"
+                  placeholder="Введите пароль еще раз"
+                  name="registration_password_check"
+              /></label>
+
+              <button type="submit" class="btn-regist btn-primary">
+                Зарегистрироваться
+              </button>
+            </form>
+          </div>
+          <div class="restore-password-block block hidden">
+            <h2 class="registration-header korataki-normal">
+              Форма восстановления доступа к учетной записи
+            </h2>
+            <h4 class="korataki-small">
+              Для восстановления доступа введи свою электронную почту
+            </h4>
+            <form action="#" method="post" class="restore-password-form">
+              <label class="lato-medium"
+                >Введите вашу электронную почту:
+                <input
+                  type="email"
+                  class="input input-login"
+                  placeholder="Введите свою почту"
+                  name="registration_email"
+              /></label>
+
+              <button type="submit" class="btn-submit btn-restore btn-primary">
+                Восстановить доступ
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="right-screen">
+          <img
+            src="./img/auth_right_screen.svg"
+            alt="right-screen"
+            class="right-screen-img"
+          />
+          <div class="inter-normal lorem">
+            Современные технологии достигли такого уровня, что синтетическое
+            тестирование однозначно фиксирует необходимость приоретизации разума
+            над эмоциями.
+          </div>
+        </div>
+      </div>
+      <dialog aria-label="pop-up" id="success-login-dialog" class="dialog">
+        <div class="dialog__wrapper">
+          <p>Вы вошли в свою учетную запись</p>
+          <button type="button" class="btn-primary btn-dialog">
+            Отлично! &#128525;
+          </button>
+        </div>
+      </dialog>
+      <dialog aria-label="pop-up" id="reject-login-modal" class="dialog">
+        <div class="dialog__wrapper">
+          <p>
+            Такого пользователя не существует.
+            <a href="#" id="registration-link">Зарегистрироваться?</a>
+          </p>
+          <button type="button" class="btn-primary btn-modal">
+            Нет, зарегистрируюсь в другой раз &#128511;
+          </button>
+        </div>
+      </dialog>
+      <dialog aria-label="pop-up" id="incorrect-email" class="dialog">
+        <div class="dialog__wrapper">
+          <p class="inter-normal">
+            Введите почту в корректном формате, например:example@gmail.com
+          </p>
+        </div>
+      </dialog>
+      <dialog aria-label="pop-up" id="success-email-restore" class="dialog">
+        <div class="dialog__wrapper">
+          <p class="inter-normal">
+            Ссылка для восстановление пароля выслана на почту
+          </p>
+        </div>
+      </dialog>
+      <dialog aria-label="pop-up" id="success-regist" class="dialog">
+        <div class="dialog__wrapper">
+          <p class="inter-normal">
+            Вы успешно зарегистрировались
+          </p>
+        </div>
+      </dialog>
+      <dialog aria-label="pop-up" id="incorrect-name" class="dialog">
+        <div class="dialog__wrapper">
+          <p class="inter-normal">
+            Допустимы только русские символы
+          </p>
+        </div>
+      </dialog>
+      <dialog aria-label="pop-up" id="incorrect-pass" class="dialog">
+        <div class="dialog__wrapper">
+          <p class="inter-normal">
+            Вы ввели разные пароли, попробуйте еще
+          </p>
+        </div>
+      </dialog>
+      <dialog aria-label="pop-up" id="empty-pass" class="dialog">
+        <div class="dialog__wrapper">
+          <p class="inter-normal">
+            Вы не ввели пароль
+          </p>
+        </div>
+      </dialog>
+    </main>
+    <footer>
+      <div class="container-footer"></div>
+    </footer>
+  </body>
+</html>

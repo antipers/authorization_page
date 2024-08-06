@@ -1,0 +1,236 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--lightgray-text);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+main {
+  height: 1080px;
+  display: flex;
+  justify-content: center;
+}
+.main-container {
+  max-width: 1440px;
+  display: flex;
+}
+.left-screen {
+  width: 720px;
+  height: 900px;
+  background-color: var(--straight-white-text);
+  border-radius: 75px;
+}
+.right-screen {
+  width: 720px;
+  height: 900px;
+  background-image: linear-gradient(#3730a3, #312e81);
+  border-radius: 75px;
+}
+.authorization-block,
+.registration-block,
+.restore-password-block {
+  max-width: 440px;
+  margin: 0 auto;
+}
+.authorization-form,
+.registration-form,
+.restore-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+label:not(.checkbox) {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  gap: 15px;
+}
+.input {
+  background-color: #f3f4f6;
+  border: 0;
+  height: 65px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: var(--dark);
+}
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--violet-accent);
+}
+a {
+  color: var(--violet-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn-primary {
+  height: 69px;
+  width: 100%;
+  background-color: var(--violet-accent);
+  border: 0px;
+  border-radius: 8px;
+  font-size: 24px;
+  color: var(--straight-white-text);
+  letter-spacing: 0.1em;
+}
+.btn-primary:active {
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(238, 238, 238) linear-gradient(#312e81, #3730a3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+.right-screen-img {
+  min-width: 720px;
+  min-height: 317px;
+  padding-top: 180px;
+}
+
+.lorem {
+  padding: 40px;
+  color: var(--straight-white-text);
+  text-align: center;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+.dialog {
+  border: none;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.dialog__wrapper {
+  padding: 1em;
+}
+#reject-login-modal::backdrop {
+  background-color: rgba(241, 241, 241, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+:root {
+  --dark: #231815;
+  --main-background: #fffffd;
+  --footer-background: #0c0c0c;
+  --lightgray-text: #cfcfcf;
+  --small-white-text: #f5f5f5;
+  --straight-white-text: #ffffff;
+  --violet-accent: #4f46e5;
+}
+::-webkit-input-placeholder {
+  color: var(--lightgray-text);
+  padding-left: 10px;
+}
+::-moz-placeholder {
+  color: var(--lightgray-text);
+  padding-left: 10px;
+}
+:-moz-placeholder {
+  color: var(--lightgray-text);
+  padding-left: 10px;
+}
+:-ms-input-placeholder {
+  color: var(--lightgray-text);
+  padding-left: 10px;
+}
+
+@font-face {
+  font-family: "Korataki";
+  src: url("../fonts/Korataki/korataki.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Korataki-italic";
+  src: url("../fonts/Korataki/korataki_italic.otf") format("opentype");
+}
+
+.hidden {
+  display: none;
+}
+.lato-old-price {
+  color: var(--lightgray-text);
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 30.8px;
+  font-size: 22px;
+  text-decoration: line-through;
+}
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.lato-medium {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-accent {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--orangered);
+  line-height: 30.8px;
+  font-size: 22px;
+}
+.lato-common-price {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--dark);
+  line-height: 30.8px;
+  font-size: 22px;
+}
+.korataki-normal {
+  font-family: "Korataki";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 58.6px;
+}
+.korataki-registration {
+  font-family: "Korataki";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 30.6px;
+}
+.korataki-small {
+  font-family: "Korataki-italic";
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 36.6px;
+}
+
+.inter-normal {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  font-size: 28px;
+  line-height: 42px;
+}
