@@ -239,3 +239,43 @@ a {
     line-height: 32.6px;
   }
 }
+
+@media (max-width: 770px) {
+  .right-screen {
+    display: none;
+  }
+  .left-screen {
+    width: 720px;
+    height: 691px;
+    border-radius: 25px;
+    padding: 10px;
+  }
+  .korataki-normal {
+    font-size: 22px;
+    line-height: 17.6px;
+}
+
+  .korataki-registration {
+    font-size: 18px;
+    line-height: 24.6px;
+  }
+  .input {
+    height: 34px;
+    font-size: 15px;
+  }
+  .korataki-small {
+    font-size: 11px;
+    line-height: 25.6px;
+  }
+  .authorization-form, .registration-form, .restore-password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+label:not(.checkbox) {
+  display: flex;
+  flex-direction: column;
+   padding-top: 0; 
+  gap: 11px;
+}
+}
